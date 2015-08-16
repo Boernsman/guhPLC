@@ -19800,6 +19800,10 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="C17" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND26" library="supply1" deviceset="GND" device=""/>
+<part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V21" library="supply1" deviceset="+3V3" device=""/>
+<part name="R25" library="resistor" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R26" library="resistor" deviceset="R-EU_" device="R0603" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -20206,6 +20210,10 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <instance part="C17" gate="G$1" x="193.04" y="246.38" rot="R90"/>
 <instance part="GND2" gate="1" x="91.44" y="246.38" rot="R90"/>
 <instance part="GND26" gate="1" x="200.66" y="246.38" rot="R90"/>
+<instance part="+3V9" gate="G$1" x="492.76" y="182.88"/>
+<instance part="+3V21" gate="G$1" x="500.38" y="182.88"/>
+<instance part="R25" gate="G$1" x="492.76" y="172.72" rot="R90"/>
+<instance part="R26" gate="G$1" x="500.38" y="172.72" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -21300,8 +21308,12 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <net name="SDA" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="PB9/I2C1_SDA/TIM17_CH1/CAN_TX"/>
-<wire x1="467.36" y1="162.56" x2="485.14" y2="162.56" width="0.1524" layer="91"/>
-<label x="472.44" y="162.56" size="1.778" layer="95"/>
+<wire x1="467.36" y1="162.56" x2="500.38" y2="162.56" width="0.1524" layer="91"/>
+<label x="502.92" y="162.56" size="1.778" layer="95"/>
+<pinref part="R26" gate="G$1" pin="1"/>
+<wire x1="500.38" y1="162.56" x2="510.54" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="500.38" y1="167.64" x2="500.38" y2="162.56" width="0.1524" layer="91"/>
+<junction x="500.38" y="162.56"/>
 </segment>
 <segment>
 <pinref part="K1" gate="G$1" pin="4"/>
@@ -21312,8 +21324,12 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <net name="SCL" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="PB8/I2C1_SCL/TIM16_CH1/CAN_RX"/>
-<wire x1="467.36" y1="165.1" x2="485.14" y2="165.1" width="0.1524" layer="91"/>
-<label x="472.44" y="165.1" size="1.778" layer="95"/>
+<wire x1="467.36" y1="165.1" x2="492.76" y2="165.1" width="0.1524" layer="91"/>
+<label x="502.92" y="165.1" size="1.778" layer="95"/>
+<pinref part="R25" gate="G$1" pin="1"/>
+<wire x1="492.76" y1="165.1" x2="510.54" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="492.76" y1="167.64" x2="492.76" y2="165.1" width="0.1524" layer="91"/>
+<junction x="492.76" y="165.1"/>
 </segment>
 <segment>
 <pinref part="K1" gate="G$1" pin="3"/>
@@ -21323,11 +21339,6 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </net>
 <net name="OSCI" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="PF0/OSC_IN"/>
-<wire x1="373.38" y1="165.1" x2="360.68" y2="165.1" width="0.1524" layer="91"/>
-<label x="363.22" y="165.1" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="Q3" gate="G$1" pin="2"/>
 <wire x1="269.24" y1="226.06" x2="284.48" y2="226.06" width="0.1524" layer="91"/>
 <wire x1="284.48" y1="226.06" x2="284.48" y2="223.52" width="0.1524" layer="91"/>
@@ -21335,6 +21346,11 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <wire x1="289.56" y1="226.06" x2="284.48" y2="226.06" width="0.1524" layer="91"/>
 <junction x="284.48" y="226.06"/>
 <label x="269.24" y="226.06" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="PC14/OSC32_IN"/>
+<wire x1="373.38" y1="149.86" x2="360.68" y2="149.86" width="0.1524" layer="91"/>
+<label x="363.22" y="149.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ADC2" class="0">
@@ -22720,6 +22736,16 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <pinref part="U1" gate="A" pin="FB"/>
 <wire x1="-22.86" y1="20.32" x2="2.54" y2="20.32" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="+3V9" gate="G$1" pin="+3V3"/>
+<pinref part="R25" gate="G$1" pin="2"/>
+<wire x1="492.76" y1="180.34" x2="492.76" y2="177.8" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V21" gate="G$1" pin="+3V3"/>
+<pinref part="R26" gate="G$1" pin="2"/>
+<wire x1="500.38" y1="180.34" x2="500.38" y2="177.8" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="UC_INT" class="0">
 <segment>
@@ -22776,11 +22802,6 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </net>
 <net name="OSCO" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="PF1/OSC_OUT"/>
-<wire x1="373.38" y1="162.56" x2="360.68" y2="162.56" width="0.1524" layer="91"/>
-<label x="363.22" y="162.56" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="Q3" gate="G$1" pin="1"/>
 <wire x1="284.48" y1="218.44" x2="284.48" y2="215.9" width="0.1524" layer="91"/>
 <wire x1="284.48" y1="215.9" x2="269.24" y2="215.9" width="0.1524" layer="91"/>
@@ -22788,6 +22809,11 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="289.56" y1="215.9" x2="284.48" y2="215.9" width="0.1524" layer="91"/>
 <junction x="284.48" y="215.9"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="PC15/OSC32_OUT"/>
+<wire x1="373.38" y1="147.32" x2="360.68" y2="147.32" width="0.1524" layer="91"/>
+<label x="363.22" y="147.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
