@@ -10096,6 +10096,23 @@ chip</description>
 <pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 <pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
+<symbol name="DS2482S-100">
+<description>The DS2482-100 is an I2C-to-1-Wire® bridge device that interfaces directly to standard (100kHz max) or fast (400kHz max) I2C masters to perform bidirectional pro- tocol conversion between the I2C master and any downstream 1-Wire slave devices. Relative to any attached 1-Wire slave device, the DS2482-100 is a 1-Wire master. Internal, factory-trimmed timers relieve the system host processor from generating time-critical 1-Wire waveforms, supporting both standard and over- drive 1-Wire communication speeds. To optimize 1-Wire waveform generation, the DS2482-100 performs slew-rate control on rising and falling 1-Wire edges and provides additional programmable features to match drive characteristics to the 1-Wire slave environment. Programmable, strong pullup features support 1-Wire power delivery to 1-Wire devices such as EEPROMs and sensors. The DS2482-100 combines these features with an output to control an external MOSFET for enhanced strong pullup application. The I2C slave address assignment is controlled by two binary address inputs, resolving potential conflicts with other I2C slave devices in the system.</description>
+<wire x1="-10.16" y1="10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<text x="-10.16" y="12.7" size="1.778" layer="94">&gt;VALUE</text>
+<text x="-10.16" y="-15.24" size="1.778" layer="94">&gt;NAME</text>
+<pin name="VCC" x="-12.7" y="7.62" length="short" direction="pwr"/>
+<pin name="IO" x="-12.7" y="2.54" length="short"/>
+<pin name="GND" x="-12.7" y="-2.54" length="short" direction="pwr"/>
+<pin name="AD0" x="12.7" y="7.62" length="short" direction="pwr" rot="R180"/>
+<pin name="AD1" x="12.7" y="2.54" length="short" direction="pwr" rot="R180"/>
+<pin name="PCTLZ" x="12.7" y="-2.54" length="short" rot="R180"/>
+<pin name="SCL" x="-12.7" y="-7.62" length="short"/>
+<pin name="SDA" x="12.7" y="-7.62" length="short" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="TLC272CD" prefix="U">
@@ -10298,6 +10315,29 @@ n WG version : Product in accordance to IEC60335-1</description>
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DS2482S-100" prefix="IC">
+<description>The DS2482-100 is an I2C-to-1-Wire® bridge device that interfaces directly to standard (100kHz max) or fast (400kHz max) I2C masters to perform bidirectional pro- tocol conversion between the I2C master and any downstream 1-Wire slave devices. Relative to any attached 1-Wire slave device, the DS2482-100 is a 1-Wire master. Internal, factory-trimmed timers relieve the system host processor from generating time-critical 1-Wire waveforms, supporting both standard and over- drive 1-Wire communication speeds. To optimize 1-Wire waveform generation, the DS2482-100 performs slew-rate control on rising and falling 1-Wire edges and provides additional programmable features to match drive characteristics to the 1-Wire slave environment. Programmable, strong pullup features support 1-Wire power delivery to 1-Wire devices such as EEPROMs and sensors. The DS2482-100 combines these features with an output to control an external MOSFET for enhanced strong pullup application. The I2C slave address assignment is controlled by two binary address inputs, resolving potential conflicts with other I2C slave devices in the system.</description>
+<gates>
+<gate name="G$1" symbol="DS2482S-100" x="0" y="0"/>
+</gates>
+<devices>
+<device name="SOI" package="SOIC127P600X175-8N">
+<connects>
+<connect gate="G$1" pin="AD0" pad="8"/>
+<connect gate="G$1" pin="AD1" pad="7"/>
+<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="IO" pad="2"/>
+<connect gate="G$1" pin="PCTLZ" pad="6"/>
+<connect gate="G$1" pin="SCL" pad="4"/>
+<connect gate="G$1" pin="SDA" pad="5"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -19505,6 +19545,90 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="transistor-power">
+<description>&lt;b&gt;Power Transistors&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="SUPER-SOT3">
+<description>&lt;b&gt;MOLDED PACKAGE SUPERSOT, 3 LEAD&lt;/b&gt; MKT-MAO3B&lt;p&gt;
+Source: http://www.fairchildsemi.com/dwg/MA/MA03B.pdf</description>
+<wire x1="1.352" y1="0.603" x2="1.352" y2="-0.603" width="0.2032" layer="21"/>
+<wire x1="1.352" y1="-0.603" x2="-1.352" y2="-0.603" width="0.2032" layer="21"/>
+<wire x1="-1.352" y1="-0.603" x2="-1.352" y2="0.603" width="0.2032" layer="21"/>
+<wire x1="-1.352" y1="0.603" x2="1.352" y2="0.603" width="0.2032" layer="21"/>
+<smd name="1" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
+<smd name="2" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
+<smd name="3" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
+<text x="-1.75" y="2" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.75" y="-3.25" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.175" y1="-1.25" x2="-0.675" y2="-0.6534" layer="51"/>
+<rectangle x1="0.675" y1="-1.25" x2="1.175" y2="-0.6534" layer="51"/>
+<rectangle x1="-0.25" y1="0.6534" x2="0.225" y2="1.25" layer="51" rot="R180"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MOSFET_P">
+<wire x1="-1.016" y1="-2.54" x2="-1.016" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="2.54" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="2.159" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="-2.159" x2="2.54" y2="-2.159" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.159" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0.508" x2="3.81" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0.508" x2="4.318" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="2.159" x2="2.54" y2="2.159" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.159" x2="0.5334" y2="2.159" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0.508" x2="3.81" y2="2.159" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="-2.159" x2="3.81" y2="-0.127" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="-2.159" x2="2.54" y2="-2.159" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="2.159" width="0.1524" layer="94"/>
+<circle x="2.54" y="2.159" radius="0.127" width="0.4064" layer="94"/>
+<circle x="2.54" y="-2.159" radius="0.127" width="0.4064" layer="94"/>
+<text x="6.35" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="6.35" y="0" size="1.778" layer="96">&gt;VALUE</text>
+<text x="1.397" y="-4.318" size="0.8128" layer="93">D</text>
+<text x="1.397" y="3.556" size="0.8128" layer="93">S</text>
+<text x="-2.286" y="1.143" size="0.8128" layer="93">G</text>
+<rectangle x1="-0.254" y1="-2.794" x2="0.508" y2="-1.27" layer="94"/>
+<rectangle x1="-0.254" y1="1.27" x2="0.508" y2="2.794" layer="94"/>
+<rectangle x1="-0.254" y1="-0.889" x2="0.508" y2="0.889" layer="94"/>
+<pin name="G" x="-2.54" y="2.54" visible="off" length="point" direction="pas"/>
+<pin name="S" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="D" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<polygon width="0.1524" layer="94">
+<vertex x="2.54" y="0"/>
+<vertex x="1.27" y="0.508"/>
+<vertex x="1.27" y="-0.508"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="3.81" y="0.508"/>
+<vertex x="3.302" y="-0.254"/>
+<vertex x="4.318" y="-0.254"/>
+</polygon>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FDN360P" prefix="Q">
+<description>&lt;b&gt;Single P-Channel, PowerTrench (R) MOSFET&lt;/b&gt;&lt;p&gt;
+Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
+<gates>
+<gate name="G$1" symbol="MOSFET_P" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SUPER-SOT3">
+<connects>
+<connect gate="G$1" pin="D" pad="3"/>
+<connect gate="G$1" pin="G" pad="1"/>
+<connect gate="G$1" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -19809,6 +19933,15 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="D15" library="guh" deviceset="1N4148W-7-F" device=""/>
 <part name="D17" library="guh" deviceset="1N4148W-7-F" device=""/>
 <part name="D19" library="guh" deviceset="1N4148W-7-F" device=""/>
+<part name="IC2" library="guh" deviceset="DS2482S-100" device="SOI"/>
+<part name="+3V22" library="supply1" deviceset="+3V3" device=""/>
+<part name="GND27" library="supply1" deviceset="GND" device=""/>
+<part name="GND28" library="supply1" deviceset="GND" device=""/>
+<part name="C33" library="resistor" deviceset="C-EU" device="C0603" value="100n"/>
+<part name="GND29" library="supply1" deviceset="GND" device=""/>
+<part name="R31" library="resistor" deviceset="R-EU_" device="R0805" value="10"/>
+<part name="+3V23" library="supply1" deviceset="+3V3" device=""/>
+<part name="Q12" library="transistor-power" deviceset="FDN360P" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19885,6 +20018,8 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <text x="360.68" y="492.76" size="6.4516" layer="94">Author Bernhard Trinnes</text>
 <text x="360.68" y="480.06" size="6.4516" layer="94">Licensed under CERN v1.2</text>
 <text x="360.68" y="467.36" size="6.4516" layer="94">ARGE guh</text>
+<text x="-93.98" y="142.24" size="6.4516" layer="97">1-Wire</text>
+<wire x1="71.12" y1="152.4" x2="248.92" y2="152.4" width="0.1524" layer="97"/>
 </plain>
 <instances>
 <instance part="R1" gate="G$1" x="-68.58" y="449.58" rot="R90"/>
@@ -20185,7 +20320,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <instance part="X6" gate="-8" x="449.58" y="279.4"/>
 <instance part="X6" gate="-9" x="449.58" y="274.32"/>
 <instance part="X6" gate="-10" x="449.58" y="269.24"/>
-<instance part="GND70" gate="1" x="124.46" y="302.26" rot="R270"/>
+<instance part="GND70" gate="1" x="124.46" y="299.72" rot="R270"/>
 <instance part="GND71" gate="1" x="137.16" y="284.48" rot="R270"/>
 <instance part="GND72" gate="1" x="137.16" y="269.24" rot="R270"/>
 <instance part="GND73" gate="1" x="215.9" y="312.42" rot="R270"/>
@@ -20219,6 +20354,15 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <instance part="D15" gate="G$1" x="195.58" y="93.98" rot="R90"/>
 <instance part="D17" gate="G$1" x="195.58" y="60.96" rot="R90"/>
 <instance part="D19" gate="G$1" x="195.58" y="25.4" rot="R90"/>
+<instance part="IC2" gate="G$1" x="-22.86" y="127"/>
+<instance part="+3V22" gate="G$1" x="-43.18" y="144.78"/>
+<instance part="GND27" gate="1" x="-43.18" y="124.46" rot="R270"/>
+<instance part="GND28" gate="1" x="2.54" y="132.08" rot="R90"/>
+<instance part="C33" gate="G$1" x="-53.34" y="134.62" rot="R90"/>
+<instance part="GND29" gate="1" x="-60.96" y="134.62" rot="R270"/>
+<instance part="R31" gate="G$1" x="25.4" y="134.62" rot="R90"/>
+<instance part="+3V23" gate="G$1" x="25.4" y="144.78"/>
+<instance part="Q12" gate="G$1" x="22.86" y="121.92"/>
 </instances>
 <busses>
 </busses>
@@ -20749,26 +20893,21 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <segment>
 <pinref part="X2" gate="-3" pin="KL"/>
 <wire x1="157.48" y1="304.8" x2="139.7" y2="304.8" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="304.8" x2="139.7" y2="302.26" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="304.8" x2="139.7" y2="299.72" width="0.1524" layer="91"/>
 <pinref part="X2" gate="-4" pin="KL"/>
-<wire x1="139.7" y1="302.26" x2="139.7" y2="299.72" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="299.72" x2="157.48" y2="299.72" width="0.1524" layer="91"/>
 <pinref part="GND70" gate="1" pin="GND"/>
-<wire x1="127" y1="302.26" x2="139.7" y2="302.26" width="0.1524" layer="91"/>
-<junction x="139.7" y="302.26"/>
+<wire x1="127" y1="299.72" x2="139.7" y2="299.72" width="0.1524" layer="91"/>
+<junction x="139.7" y="299.72"/>
+<pinref part="X2" gate="-5" pin="KL"/>
+<wire x1="157.48" y1="294.64" x2="139.7" y2="294.64" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="294.64" x2="139.7" y2="299.72" width="0.1524" layer="91"/>
+<junction x="139.7" y="299.72"/>
 </segment>
 <segment>
 <pinref part="X2" gate="-7" pin="KL"/>
 <wire x1="157.48" y1="284.48" x2="139.7" y2="284.48" width="0.1524" layer="91"/>
 <pinref part="GND71" gate="1" pin="GND"/>
-<pinref part="X2" gate="-5" pin="KL"/>
-<wire x1="157.48" y1="294.64" x2="139.7" y2="294.64" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="294.64" x2="139.7" y2="289.56" width="0.1524" layer="91"/>
-<pinref part="X2" gate="-6" pin="KL"/>
-<wire x1="139.7" y1="289.56" x2="157.48" y2="289.56" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="284.48" x2="139.7" y2="289.56" width="0.1524" layer="91"/>
-<junction x="139.7" y="284.48"/>
-<junction x="139.7" y="289.56"/>
 </segment>
 <segment>
 <pinref part="X2" gate="-10" pin="KL"/>
@@ -20826,6 +20965,27 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <segment>
 <pinref part="C16" gate="G$1" pin="2"/>
 <pinref part="GND2" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="GND"/>
+<pinref part="GND27" gate="1" pin="GND"/>
+<wire x1="-35.56" y1="124.46" x2="-40.64" y2="124.46" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND28" gate="1" pin="GND"/>
+<wire x1="0" y1="132.08" x2="-2.54" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="132.08" x2="-2.54" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="AD0"/>
+<wire x1="-2.54" y1="134.62" x2="-10.16" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="AD1"/>
+<wire x1="-10.16" y1="129.54" x2="-2.54" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="129.54" x2="-2.54" y2="132.08" width="0.1524" layer="91"/>
+<junction x="-2.54" y="132.08"/>
+</segment>
+<segment>
+<pinref part="C33" gate="G$1" pin="1"/>
+<pinref part="GND29" gate="1" pin="GND"/>
+<wire x1="-55.88" y1="134.62" x2="-58.42" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="1">
@@ -21327,6 +21487,11 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <wire x1="236.22" y1="474.98" x2="220.98" y2="474.98" width="0.1524" layer="91"/>
 <label x="220.98" y="474.98" size="1.9304" layer="95"/>
 </segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="SDA"/>
+<wire x1="-10.16" y1="119.38" x2="10.16" y2="119.38" width="0.1524" layer="91"/>
+<label x="0" y="119.38" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SCL" class="0">
 <segment>
@@ -21342,6 +21507,11 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <pinref part="K1" gate="G$1" pin="3"/>
 <wire x1="236.22" y1="477.52" x2="220.98" y2="477.52" width="0.1524" layer="91"/>
 <label x="220.98" y="477.52" size="1.9304" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="SCL"/>
+<wire x1="-35.56" y1="119.38" x2="-58.42" y2="119.38" width="0.1524" layer="91"/>
+<label x="-55.88" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OSCI" class="0">
@@ -22741,6 +22911,20 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <pinref part="R26" gate="G$1" pin="2"/>
 <wire x1="500.38" y1="180.34" x2="500.38" y2="177.8" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="VCC"/>
+<pinref part="+3V22" gate="G$1" pin="+3V3"/>
+<wire x1="-35.56" y1="134.62" x2="-43.18" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="134.62" x2="-43.18" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="C33" gate="G$1" pin="2"/>
+<wire x1="-43.18" y1="134.62" x2="-48.26" y2="134.62" width="0.1524" layer="91"/>
+<junction x="-43.18" y="134.62"/>
+</segment>
+<segment>
+<pinref part="+3V23" gate="G$1" pin="+3V3"/>
+<pinref part="R31" gate="G$1" pin="2"/>
+<wire x1="25.4" y1="142.24" x2="25.4" y2="139.7" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="UC_INT" class="0">
 <segment>
@@ -22759,9 +22943,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <pinref part="U$2" gate="G$1" pin="BOOT0(P44)"/>
 <wire x1="373.38" y1="175.26" x2="355.6" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="R24" gate="G$1" pin="2"/>
-<wire x1="355.6" y1="175.26" x2="342.9" y2="175.26" width="0.1524" layer="91"/>
-<junction x="355.6" y="175.26"/>
-<label x="342.9" y="175.26" size="1.778" layer="95"/>
+<label x="358.14" y="175.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SWDIO" class="0">
@@ -22844,6 +23026,38 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <wire x1="-10.16" y1="391.16" x2="-10.16" y2="401.32" width="0.1524" layer="91"/>
 <junction x="0" y="391.16"/>
 <junction x="-10.16" y="401.32"/>
+</segment>
+</net>
+<net name="1-WIRE" class="0">
+<segment>
+<pinref part="IC2" gate="G$1" pin="IO"/>
+<wire x1="-35.56" y1="129.54" x2="-58.42" y2="129.54" width="0.1524" layer="91"/>
+<label x="-55.88" y="129.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X2" gate="-6" pin="KL"/>
+<wire x1="139.7" y1="289.56" x2="157.48" y2="289.56" width="0.1524" layer="91"/>
+<label x="142.24" y="289.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="25.4" y1="114.3" x2="45.72" y2="114.3" width="0.1524" layer="91"/>
+<label x="35.56" y="114.3" size="1.778" layer="95"/>
+<pinref part="Q12" gate="G$1" pin="D"/>
+<wire x1="25.4" y1="116.84" x2="25.4" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="IC2" gate="G$1" pin="PCTLZ"/>
+<pinref part="Q12" gate="G$1" pin="G"/>
+<wire x1="-10.16" y1="124.46" x2="20.32" y2="124.46" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="R31" gate="G$1" pin="1"/>
+<pinref part="Q12" gate="G$1" pin="S"/>
+<wire x1="25.4" y1="129.54" x2="25.4" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
