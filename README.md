@@ -3,19 +3,10 @@ The purpose was to design a smart home server that runns guhIO and is especially
 
 Please note: guhPLC is the abbreviation for 'guh' programmable logic controller. The smart home server has no powerline interface yet.
 
-The main processing unit is an Olimex A13 SoM - containing an Allwinner A13 SoC - 1Ghz; 256Mb RAM; Micro-SD Card 
+Take a look at the [guhPLC | github wiki](https://github.com/guh/guhPLC/wiki). 
 
-Ports:
-* Power 24VDC - 1A
-* LAN
-* 8 Digital In 24V DC
-* 4 Analog Out 0-10V 20mA
-* 4 Analog In 0-10V
-* 8 Relay 5A/240VAC max. 
-* RS-485
-
-The PCB is design for din rail T9 boxes.
-Recommended housing: Camdenboss CNMB/9- 
+[guhIO | Forum](https://groups.google.com/forum/#!forum/guhio)
+[guhIO | Google+ Community](https://plus.google.com/u/0/communities/113467056514652214831).
 
 The layout is not yet tested - no warranty for functionality
 
