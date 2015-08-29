@@ -6,6 +6,7 @@ Please note: guhPLC is the abbreviation for 'guh' programmable logic controller.
 Take a look at the [guhPLC | github wiki](https://github.com/guh/guhPLC/wiki). 
 
 [guhIO | Forum](https://groups.google.com/forum/#!forum/guhio)
+
 [guhIO | Google+ Community](https://plus.google.com/u/0/communities/113467056514652214831).
 
 The layout is not yet tested - no warranty for functionality
