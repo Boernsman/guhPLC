@@ -11,6 +11,11 @@ Take a look at the [guhPLC | github wiki](https://github.com/guh/guhPLC/wiki).
 
 The layout is not yet tested - no warranty for functionality
 
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SNATFFJGNRUZ6)
+
+
+
 	Copyright ARGE guh 2015.
 
 	This documentation describes Open Hardware and is licensed under the CERN OHL v. 1.2.
