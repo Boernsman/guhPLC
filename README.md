@@ -1,22 +1,11 @@
-# guhPLC
+# nymea PLC
 The purpose was to design a smart home server that runns guhIO and is especially fittet to the needs of single-family house builders. It is the central switching unit that can be mounted into the electrical cabinet.
 
 Please note: guhPLC is the abbreviation for 'guh' programmable logic controller. The smart home server has no powerline interface yet.
 
-Take a look at the [guhPLC | github wiki](https://github.com/guh/guhPLC/wiki). 
-
-[guhIO | Forum](https://groups.google.com/forum/#!forum/guhio)
-
-[guhIO | Google+ Community](https://plus.google.com/u/0/communities/113467056514652214831).
-
 The layout is not yet tested - no warranty for functionality
 
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SNATFFJGNRUZ6)
-
-
-
-	Copyright ARGE guh 2015.
+	Copyright guh GmbH 2015-2019.
 
 	This documentation describes Open Hardware and is licensed under the CERN OHL v. 1.2.
 
